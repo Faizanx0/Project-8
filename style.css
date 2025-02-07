@@ -1,0 +1,664 @@
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-regular-webfont.ttf);
+}
+
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-light-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: "plain light";
+    overflow: hidden;
+}
+
+.mousefollower{
+    background-color:rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    border: 2px solid #fff;
+  
+}
+
+#loader{
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    position: fixed;
+    padding: 25vh 10vw;
+    background-color: #0B0B0B;
+    cursor: none;
+}
+
+.line{
+    height:fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+#part1{
+    margin-top: -3vh;
+    width: 15vw;
+    display: flex;
+    font-family: "silk serif";
+}
+
+#part1 h5{
+    width: 5vw;
+    font-size: 3vw;
+    font-weight: 500; 
+}
+
+#part1 h6{
+    font-weight: 500;
+    font-size: 3vw;
+}
+
+.line h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.line h2{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    animation-name: anime;
+    animation-duration:1s;
+    animation-iteration-count: infinite;
+    height: 18vh;
+}
+
+
+@keyframes anime {
+    0%{ 
+        font-family: "plain light";
+        color: white;
+        -webkit-text-stroke:0;
+        font-weight: 600;
+    }
+    47%{
+        font-family: "plain light";
+        font-weight: 600;
+        color: white;
+        -webkit-text-stroke:0;
+    }
+    50%{
+   
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        font-weight: 500;
+    }
+    100%{
+   
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+        font-weight: 500;
+    }
+}
+
+#loader>h5{
+    color: rgba(255, 255, 255, 0.719);
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+
+
+
+#main{
+    background-color: #0B0B0B;
+    color: white;
+}
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+    position:relative;
+    color: white;
+}
+
+#nav{
+    padding: 0vh 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+#nav-part1{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    
+}
+
+#nav>h5{
+    text-transform: capitalize;
+    font-size: 0.8vw;
+    margin-left: -25vw;
+    color: rgba(255, 255, 255, 0.863);
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    color: rgba(255, 255, 255, 0.651);
+}
+
+#center{
+    width: fit-content;
+    padding: 15vh 25vw;
+    position: relative;
+  
+}
+
+.text{
+    height:fit-content;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.text h1{
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#center:before{
+    content: "01";
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    position: absolute;
+    font-style: italic;
+    left: 20%;
+    top: 17%;
+}
+
+.text h3{
+    font-size: 6vw;
+    font-weight: 600;
+}
+
+#special{
+    gap: 1vw;   
+    cursor: none;
+}
+
+#special h1{
+    border-bottom: 8px solid white;
+    
+}
+
+#special h1:hover{
+    border-bottom:0px transparent;
+    -webkit-text-stroke: 0.5px white;
+    font-weight: 100;
+    color: transparent;
+}
+
+
+#flag{
+    height: 50vh;
+    z-index: -999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+
+#page2{
+    width: 100%;
+    height: 80vh;
+    background-color: #151515;
+}
+
+#video-div{
+    width: 65vw;
+    height: 60vh;
+    position: relative;
+    top:10vh;
+    left: 33%;
+    background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+#video-div video{
+    object-fit:cover; 
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: relative;
+}
+
+#video-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+#video-cursor{
+    background-color: #FFA63D;
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 85%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+#video-cursor i{
+    font-size: 2vw;
+}
+
+#page3{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #151515;
+}
+
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    margin-left: 27vw;
+    position: relative;
+}
+
+#page3 .underline{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+
+#page3 h1::before{
+    content: "02";
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    position: absolute;
+    font-style: italic;
+    top: 10%;
+    left: -10% ;
+}
+
+#image-div-container{
+    position: relative;
+    padding: 10vh 2vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+
+.image-div{
+    width: 33vw;
+    height: 80vh;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    margin: 2vw;
+}
+
+.image-div:nth-child(1){
+    width: 25vw;
+    height: 65vh;
+}
+.image-div:nth-child(5){
+    margin-top: 15vh;
+    width: 30vw;
+}
+
+.image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;  
+    
+}
+
+
+.circle1{
+    width: 23vw;
+    height: 23vw;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+}
+
+.circle1 svg{
+    height: 40%;
+}
+
+.circle1:nth-child(3){
+    margin-left: 5vw;
+    margin-top: 40vh;
+}
+.circle1:nth-child(4) svg{
+   rotate: -45deg;
+}
+
+
+
+.circle-in{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    transition: all ease 0.3s;
+    opacity: 0;
+}
+
+.circle-in p{
+    opacity: 0;
+    position: absolute;
+    color: black;
+    width: 60%;
+    font-size: 0.9vw;
+    font-weight: 600;
+    scale: 0;
+}
+
+.circle1:hover .circle-in,.circle-in p{
+    scale: 1;
+    opacity: 1;
+}
+
+.circle1:nth-child(4) p{
+    font-size: 1.2vw;
+    rotate: -45deg;
+ }
+
+
+
+
+#page4{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #151515;
+   
+}
+
+#page4-content{
+    position: relative;
+    padding-top: 5vh;
+    padding-left:  27vw;
+    height: 230vh;
+}
+
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#page4-content h1::before{
+    content: "03";
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    position: absolute;
+    font-style: italic;
+    top: 5%;
+    left: -10% ;
+}
+
+#page4-content .underline{
+    height: 2px;
+    width: 73vw;
+    background-color: rgba(255, 255, 255, 0.753);
+    margin: 6vw 0;
+   
+}
+
+#page4-content>p{
+    color: rgba(255, 255, 255, 0.884);
+    width: 50%;    
+    font-weight: 500;
+    font-size: 1.8vw;
+    margin-top: 30vh;
+}
+
+#page4-flex{
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    margin-top: 10vh;
+
+}
+
+#page4-flex img{
+    width: 60%;
+    height: 100%;
+}
+
+#page4-flex p{
+    font-size: 1.3vw;
+    width: 18vw;
+    font-weight: 500;
+    margin-left: 3vw;
+    color: rgba(255, 255, 255, 0.884);
+}
+
+#page4-blue{
+    width: 30vw;
+    height: 75vh;
+    background-color: #3F7DF4;
+    position: absolute;
+    margin-top: -42vh;
+    margin-left: 25vw;
+    padding: 2vh 3vw;
+}
+
+.awards{
+    width: 100%;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.awards h4{
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin: 5vh 0;
+}
+
+.awards p{
+    font-size: 1vw;
+    width: 40%;
+}
+
+.underline{
+    height: 2px;
+    width: 73vw;
+    position: absolute;
+    right: 0%;
+    background-color: rgba(255, 255, 255, 0.753);
+}
+
+#page4>h5{
+    margin-top: 3vh;
+    margin-left:calc(100% - 73vw);
+    font-size: 0.9vw;
+    font-weight: 600;
+}
+
+#page5{
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+    padding-top: 5vh;
+}
+
+.elem{
+    white-space: nowrap;
+    overflow-x: hidden;  
+      
+}
+
+.elem span{
+    font-style: italic;
+    font-family: "silk serif";
+}
+
+.elem h1{
+    font-size: 6vw;
+    text-transform: uppercase;
+    display: inline-block;
+    -webkit-text-stroke: 1px white;
+    font-weight: 300;
+    color: transparent;
+    margin-right: 16px;
+    animation: mover 15s infinite linear;
+}
+
+.elem:nth-child(3) h1{
+    animation: mover 10s infinite linear;
+}
+
+.elem:nth-child(2) h1{
+    animation: mover 12s infinite linear reverse;
+}
+
+.elem:nth-child(4) h1{
+    animation: mover 18s  infinite linear reverse;
+}
+
+@keyframes mover {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 24px));
+    }
+}
+
+#footer{
+    width: 100%;
+    height: 80vh;
+    background-color: #151515;
+}
+
+#head{
+    position: relative;
+    margin-left: 27vw;    
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    padding-bottom: 7vh;
+}
+
+#head h1{
+    font-size: 6vw;
+    text-transform: uppercase;
+    height: 17vh;
+    position: relative;
+}
+
+#head h1::before{
+    content: "04";
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+    position: absolute;
+    font-style: italic;
+    top: 5%;
+    left: -20% ;
+}
+
+#head h2 {
+    font-size: 7.9vw;
+    font-weight: 500;
+    opacity: 1;
+    position: absolute;
+    font-family: "silk serif";
+}
+
+#head h2 span {
+    font-family: "silk serif";
+    opacity: 0;
+    -webkit-text-stroke: 0.5px #fff;
+    color: transparent;
+}
+
+#head i{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+
+#foot{
+   padding:8vh 0 10vh 27vw;
+   display: flex;
+   justify-content: space-around;
+}
+
+.box h6{
+    font-size: 1.3vw;
+    font-weight: 600;
+    padding-bottom: 5vh;
+}
+
+.box h5{
+    font-size: 0.9vw;
+    font-weight: 500;
+    width: 50%;
+}
+
+.box:nth-child(3) h5:hover{
+    width: 100%;
+    cursor: pointer;
+    border-bottom:1px solid white; 
+}
+
+#footer>h5{
+    margin-top: 5vh;
+    margin-left: 27vw;
+    font-weight:500;
+}
+
