@@ -35,7 +35,7 @@ function loadingAnimation(){
     
     var tl = gsap.timeline();
     tl.from(".line h1",{
-        y:110,
+        y:150,
         stagger:0.3,
         delay:0.2,
         ease: "back.out(2.5)"
