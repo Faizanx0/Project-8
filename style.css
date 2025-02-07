@@ -228,7 +228,7 @@ html,body{
     height: 50vh;
     z-index: -999;
     position: absolute;
-    top: 0;
+    top: -25%;
     left: 0;
     transform: translate(-50%,-50%);
     opacity: 0;
